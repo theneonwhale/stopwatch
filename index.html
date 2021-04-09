@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Stopwatch</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.2.0/modern-normalize.min.css"
+      integrity="sha512-sqIVMkf5f8XGYI/UZYGs7wODxlUeoj9JknataPfUwtvrSKWMHrMXGZ7Evb6nabFYJQG15vFFyALe6r0nWCD1Ug=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="body">
+    <h1 class="stopwatch-title">Stopwatch</h1>
+    <div class="stopwatch">
+      <p class="clockface js-clockface">00:00:00</p>
+
+      <div class="actions">
+        <!-- «Start / Stop» - запуск / остановка отсчета времени, останавливает и обнуляет значение таймера. -->
+        <button class="stopwatch-btn start-btn" data-action-startStop>
+          start/stop
+        </button>
+        <!-- «Wait» - работает на двойной клик (время между нажатиями не более 300 мс!) таймер должен прекратить отсчет времени; если после него нажать старт, то возобновляется отсчет. -->
+        <button class="stopwatch-btn wait-btn" data-action-wait>wait</button>
+        <!-- «Reset» - сброс таймера на 0.  Обнуляет таймер и снова начинает отсчет. -->
+        <button class="stopwatch-btn reset-btn" data-action-reset>reset</button>
+      </div>
+    </div>
+    <script src="./stopwatch.js" type="module"></script>
+  </body>
+</html>

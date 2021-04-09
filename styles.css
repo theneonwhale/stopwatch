@@ -1,0 +1,124 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: 'Roboto Mono', monospace;
+}
+
+.stopwatch-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: #770081;
+
+  font-size: 20px;
+  font-weight: 500;
+}
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+}
+
+.clockface {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.stopwatch-btn {
+  margin: 20px;
+  padding: 10px;
+  width: 120px;
+
+  border-radius: 50%;
+  color: #770081;
+  background-color: #ffef60;
+  cursor: pointer;
+  border: 1px solid #ffef60;
+
+  font-size: 15px;
+
+  transform: scale(1);
+  text-align: center;
+}
+
+.stopwatch-btn:hover {
+  background-color: #ffe817;
+
+  transform: scale(1.05);
+}
+
+.start-btn,
+.wait-btn,
+.reset-btn {
+  position: relative;
+}
+
+.start-btn::before {
+  display: block;
+  width: 400px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+
+  content: 'Start and stop timing, stops and resets the stopwatch value.';
+  transform: translate(0, 0);
+  opacity: 0;
+  visibility: hidden;
+  font-size: 11px;
+  color: #da0000;
+}
+.start-btn:hover::before {
+  transform: translate(5%, -115%);
+  opacity: 1;
+  visibility: visible;
+}
+.wait-btn::before {
+  display: block;
+  width: 400px;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+
+  content: 'Stops counting the time. If then press the start button, the timing will resume. Works on double click.';
+  transform: translate(0, 0);
+  opacity: 0;
+  visibility: hidden;
+  font-size: 11px;
+  color: #da0000;
+}
+
+.wait-btn:hover::before {
+  transform: translate(-37%, -180%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.reset-btn::before {
+  display: block;
+  width: 400px;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+
+  content: 'Resets the stopwatch and starts counting again.';
+  transform: translate(0, 0);
+  opacity: 0;
+  visibility: hidden;
+  font-size: 11px;
+  color: #da0000;
+}
+
+.reset-btn:hover::before {
+  transform: translate(-80%, -158%);
+  opacity: 1;
+  visibility: visible;
+}
